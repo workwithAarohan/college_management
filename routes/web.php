@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\TstController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/create',function(){
+    return view('create');
+});
+
+
+Route::get('test',[TestController::class,'show']);
+
+Route::resource('tst',TstController::class);
