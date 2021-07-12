@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\TstController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('/create',function(){
 
 
 Route::get('test',[TestController::class,'show']);
+
+Route::resource('tst',TstController::class);

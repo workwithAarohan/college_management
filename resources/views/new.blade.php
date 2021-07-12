@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    suman  daju is a true lover
+    <div class=box>
+       @foreach ($tests as $test)
+
+          {{ $test->name }}
+
+         {{ $test->description }} <br>
+
+           @endforeach
+    </div>
 </body>
 </html>
