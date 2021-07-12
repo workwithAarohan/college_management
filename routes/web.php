@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\NewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,6 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 //testing
+Route::get('/test', [TestController::class,'index']);
+
+Route::resource('/new', NewController::class);
