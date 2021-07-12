@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return 'Mero ta kaam sakiyo kta ho!! Ma sutey, goodnight!!';
+        return view('user');
     }
 }
