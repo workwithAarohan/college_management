@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\NewController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FirstController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +24,14 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/user', function () {
+    return view('user');
+});
+
+Route::get('/home',[HomeController::class,'index'])->name('home.index');
+
+Route::resource('/first',App\Http\Controllers\FirstController::class);
 
 require __DIR__.'/auth.php';
 
