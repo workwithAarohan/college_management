@@ -9,4 +9,11 @@ class TestController extends Controller
              function show(){
                  return view('test');
              }
+
+    
+    public function index()
+    {
+        return view('test');
+    }
 }
+

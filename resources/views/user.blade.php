@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    suman  daju is a true lover
+    <p> Hello my boys! Welcome to the CODING WORLD. <br> </p>
+
+    @foreach ($firsts as $first)
+
+        {{ $first->name }}
+        
+        {{ $first->task }}
+
+        {{ $first->position }} <br>
+
+    @endforeach
+
+
 </body>
 </html>
