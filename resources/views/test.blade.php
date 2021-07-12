@@ -10,6 +10,3 @@
     <h2>Welcome</h2>
 </body>
 </html>
-
-view => /blade.php file html code 
-web.php => url -- blade.php link

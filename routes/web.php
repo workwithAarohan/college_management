@@ -17,19 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// user request => /test 
-// Route::get('/test', function(){
-//     return view('test');
-// });
-
-Route::get('/test', [TestController::class, 'test']);
-
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
-//testing
+Route::get('/test', [TestController::class,'index']);
