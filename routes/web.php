@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FirstController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ Route::get('/user', function () {
 });
 
 Route::get('/home',[HomeController::class,'index'])->name('home.index');
+
+Route::resource('/first',App\Http\Controllers\FirstController::class);
 
 require __DIR__.'/auth.php';
